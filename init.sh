@@ -63,8 +63,6 @@ yay -S --noconfirm \
   mpv \
   nautilus \
   nerd-fonts-jetbrains-mono \
-  hyprland \
-  xdg-desktop-portal-hyprland \
   rofi \
   waybar \
   mako \
@@ -75,6 +73,11 @@ yay -S --noconfirm \
   grim \
   slurp \
   satty \
-  pavucontrol
+  pavucontrol \
+  hyprland \
+  xdg-desktop-portal-hyprland \
+  sddm \
+  polkit-kde-agent \
+  xorg-xwayland
 
 gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
