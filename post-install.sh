@@ -57,3 +57,6 @@ stow waybar
 stow rofi
 cd -
 
+# Remove kitty (only needed as temp terminal before dotfiles applied)
+yay -Rns --noconfirm kitty
+

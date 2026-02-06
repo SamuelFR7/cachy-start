@@ -79,7 +79,8 @@ yay -S --needed --noconfirm \
   xdg-desktop-portal-hyprland \
   sddm \
   polkit-kde-agent \
-  xorg-xwayland
+  xorg-xwayland \
+  kitty
 
 ## SDDM enable
 sudo systemctl enable sddm
