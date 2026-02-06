@@ -38,7 +38,12 @@ yay -S --needed --noconfirm \
   xdg-user-dirs \
   jdk17-openjdk \
   watchman-bin \
-  zsh
+  zsh \
+  qemu-full \
+  libvirt \
+  virt-manager \
+  dnsmasq \
+  edk2-ovmf
 
 ## XDG user directories
 xdg-user-dirs-update
@@ -56,6 +61,10 @@ curl -fsSL https://claude.ai/install.sh | bash
 sudo groupadd docker 2>/dev/null || true
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
+
+## KVM / libvirt
+sudo usermod -aG kvm,libvirt $USER
+sudo systemctl enable --now libvirtd
 
 # Mise Config
 mise settings add idiomatic_version_file_enable_tools node
