@@ -55,4 +55,7 @@ stow hypr
 stow mako
 stow waybar
 stow rofi
+stow wallpapers
 cd -
+
+"$HOME/.local/scripts/hypr_change_wall" --random
