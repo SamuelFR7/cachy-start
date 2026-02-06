@@ -36,6 +36,8 @@ yay -S --needed --noconfirm \
   ripgrep \
   fd \
   xdg-user-dirs \
+  jdk17-openjdk \
+  watchman-bin \
   zsh
 
 ## XDG user directories
@@ -91,7 +93,8 @@ yay -S --needed --noconfirm \
   sddm \
   polkit-kde-agent \
   xorg-xwayland \
-  kitty
+  kitty \
+  android-studio
 
 ## SDDM enable
 sudo systemctl enable sddm
