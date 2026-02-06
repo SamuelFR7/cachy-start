@@ -35,7 +35,11 @@ yay -S --needed --noconfirm \
   wl-clipboard \
   ripgrep \
   fd \
+  xdg-user-dirs \
   zsh
+
+## XDG user directories
+xdg-user-dirs-update
 
 ## Change shell to zsh
 chsh -s /bin/zsh
