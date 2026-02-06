@@ -52,7 +52,9 @@ xdg-user-dirs-update
 chsh -s /bin/zsh
 
 ## Claude Code
-curl -fsSL https://claude.ai/install.sh | bash
+if ! command -v claude &>/dev/null; then
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
 
 ## Tmux TPM
 [[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
