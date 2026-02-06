@@ -13,13 +13,14 @@ if ! command -v yay &>/dev/null; then
 fi
 
 # Terminal tools/apps
-yay -S --noconfirm \
+yay -S --needed --noconfirm \
   btop \
   cargo \
   docker \
   fastfetch \
   ghostty \
   git-crypt \
+  gum \
   lazygit \
   mise \
   neovim \
@@ -40,7 +41,7 @@ yay -S --noconfirm \
 chsh -s /bin/zsh
 
 ## Tmux TPM
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+[[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Docker enable
 sudo groupadd docker 2>/dev/null || true
@@ -48,7 +49,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 
 # Desktop Apps/Utilities
-yay -S --noconfirm \
+yay -S --needed --noconfirm \
   1password \
   baobab \
   bruno \
@@ -62,7 +63,7 @@ yay -S --noconfirm \
   spotify \
   mpv \
   nautilus \
-  nerd-fonts-jetbrains-mono \
+  ttf-jetbrains-mono-nerd \
   rofi \
   waybar \
   mako \

@@ -5,13 +5,13 @@ set -euo pipefail
 redisName="redis7"
 
 # Redis
-[[ $(docker ps -f "name=$redisName" --format '{{.Names}}') == $redisName ]] ||
+[[ $(docker ps -a -f "name=$redisName" --format '{{.Names}}') == $redisName ]] ||
   docker run -d --restart unless-stopped -p "6379:6379" --name "$redisName" redis:7
 
 pgName="postgres17"
 
 # Postgres
-[[ $(docker ps -f "name=$pgName" --format '{{.Names}}') == $pgName ]] ||
+[[ $(docker ps -a -f "name=$pgName" --format '{{.Names}}') == $pgName ]] ||
   docker run -d --restart unless-stopped -p "5432:5432" --name "$pgName" -e POSTGRES_HOST_AUTH_METHOD=trust postgres:17
 
 if ! op account get &>/dev/null; then
@@ -33,7 +33,7 @@ chmod 600 "$HOME/.ssh/id_ed25519"
 chmod 644 "$HOME/.ssh/id_ed25519.pub"
 
 cd "$HOME"
-git clone git@github.com:SamuelFR7/new_dotfiles.git dotfiles
+[[ -d "$HOME/dotfiles" ]] || git clone git@github.com:SamuelFR7/new_dotfiles.git dotfiles
 cd "$HOME/dotfiles"
 git-crypt unlock "$HOME/.ssh/dotfiles-key"
 rm -rf "$HOME/.config/btop"
@@ -55,6 +55,5 @@ stow hypr
 stow mako
 stow waybar
 stow rofi
-stow
 cd -
 
