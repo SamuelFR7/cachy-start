@@ -81,6 +81,9 @@ yay -S --needed --noconfirm \
   polkit-kde-agent \
   xorg-xwayland
 
+## SDDM enable
+sudo systemctl enable sddm
+
 # XDG default applications
 ## Videos
 for mime in video/mp4 video/x-matroska video/webm video/x-msvideo video/mpeg video/ogg video/quicktime video/x-flv; do
