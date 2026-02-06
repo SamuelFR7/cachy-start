@@ -40,6 +40,9 @@ yay -S --needed --noconfirm \
 ## Change shell to zsh
 chsh -s /bin/zsh
 
+## Claude Code
+curl -fsSL https://claude.ai/install.sh | bash
+
 ## Tmux TPM
 [[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -47,6 +50,10 @@ chsh -s /bin/zsh
 sudo groupadd docker 2>/dev/null || true
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
+
+# Mise Config
+mise settings add idiomatic_version_file_enable_tools node
+mise use -g node@lts
 
 # Desktop Apps/Utilities
 yay -S --needed --noconfirm \
