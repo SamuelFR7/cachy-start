@@ -20,7 +20,6 @@ yay -S --needed --noconfirm \
   fastfetch \
   ghostty \
   git-crypt \
-  gum \
   lazygit \
   mise \
   neovim \
@@ -154,4 +153,5 @@ xdg-mime default libreoffice-impress.desktop application/vnd.openxmlformats-offi
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
-gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
+read -rp "Ready to reboot for all settings to take effect? [y/N] " ans
+[[ "$ans" =~ ^[Yy]$ ]] && sudo reboot
