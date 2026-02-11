@@ -150,4 +150,8 @@ xdg-mime default libreoffice-calc.desktop application/vnd.openxmlformats-officed
 xdg-mime default libreoffice-impress.desktop application/vnd.ms-powerpoint
 xdg-mime default libreoffice-impress.desktop application/vnd.openxmlformats-officedocument.presentationml.presentation
 
+# Dark theme
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+
 gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
