@@ -25,6 +25,9 @@ yay -S --needed --noconfirm \
   neovim \
   1password-cli \
   postgresql \
+  php82 \
+  php82-fpm \
+  php82-gd \
   starship \
   stow \
   tmux \
