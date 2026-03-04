@@ -72,6 +72,7 @@ sudo systemctl enable --now libvirtd
 
 # Mise Config
 mise settings add idiomatic_version_file_enable_tools node
+mise settings add idiomatic_version_file_enable_tools python
 mise use -g node@lts
 
 # Desktop Apps/Utilities
