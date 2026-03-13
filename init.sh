@@ -79,7 +79,7 @@ mise use -g node@lts
 yay -S --needed --noconfirm \
   1password \
   baobab \
-  bruno \
+  yaak-bin \
   dbeaver \
   evince \
   libreoffice-still \
